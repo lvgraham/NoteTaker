@@ -15,7 +15,7 @@ app.get('/api/notes', (req,res) => {
 })
 
 //post route to add /api/notes
-app.post("/api/characters", (req, res) => {
+app.post("/api/notes", (req, res) => {
    
 });
 
