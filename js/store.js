@@ -58,5 +58,5 @@ class Store {
 
 module.exports = new Store();
 
-//write api & html routes to use the methods in this store so that when it gets requests it will know what to do.
+
 
