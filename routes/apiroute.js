@@ -1,12 +1,12 @@
 const express = require('express');
 const store = require('../develop/store');
 
-const app = express();
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+const apiRoute = express.Router();
 
-app.get('/api/notes', (req,res) => {
+apiRoute.get('/api/notes', (req,res) => {
     store.getNotes().then(notes => {
         return res.json(notes);
     }).catch(err => {
@@ -14,18 +14,18 @@ app.get('/api/notes', (req,res) => {
     })
 })
 
-//post route to add /api/notes
-app.post("/api/notes", (req, res) => {
+// //post route to add /api/notes
+// apiRoute.post("/api/notes", (req, res) => {
    
-});
+// });
 
 
-//delete route to remove the notes /api/notes/:id
-app.delete('/api/notes/:id', (req, res) => {
+// //delete route to remove the notes /api/notes/:id
+// apiRoute.delete('/api/notes/:id', (req, res) => {
 
-})
+// })
 
-
+module.exports = apiRoute;
 
 
 //write api & html routes to use the methods in this store so that when it gets requests it will know what to do.
