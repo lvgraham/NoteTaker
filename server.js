@@ -1,7 +1,7 @@
 const express = require('express');
 
 //require routers
-const apiRoute = require('./routes/apiroute');
+const apiRouter = require('./routes/apiroute');
 const htmlRoute = require('./routes/htmlroute');
 
 const app = express();
@@ -17,7 +17,7 @@ app.use(express.json())
 app.use('/', htmlRoute);
 
 //route to get to the notes page
-app.use('/notes', apiRoute)
+app.use('/api/notes', apiRouter)
 
 
 app.listen(PORT, ()=> {

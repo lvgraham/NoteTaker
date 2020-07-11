@@ -38,7 +38,7 @@ class Store {
             throw new Error('You need a title & text to save a note to the database')
         }
 
-        const newNote = {title, text, id: uuid()}
+        const newNote = {title, text, id: uuid}
 
         return this.getNotes().then(notes => {
             return [...notes, newNote]
