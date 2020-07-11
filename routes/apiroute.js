@@ -14,16 +14,16 @@ apiRoute.get('/api/notes', (req,res) => {
     })
 })
 
-// //post route to add /api/notes
-// apiRoute.post("/api/notes", (req, res) => {
+//post route to add /api/notes
+apiRoute.post("/api/notes", (req, res) => {
    
-// });
+});
 
 
-// //delete route to remove the notes /api/notes/:id
-// apiRoute.delete('/api/notes/:id', (req, res) => {
+//delete route to remove the notes /api/notes/:id
+apiRoute.delete('/api/notes/:id', (req, res) => {
 
-// })
+})
 
 module.exports = apiRoute;
 
