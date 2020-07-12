@@ -21,7 +21,7 @@ apiRouter.post("/", (req, res) => {
     }).catch(err => {
         return res.status(500).json(err);
     })
-});
+})
 
 // delete route to remove the notes /api/notes/:id
 apiRouter.delete('/:id', (req, res) => {
