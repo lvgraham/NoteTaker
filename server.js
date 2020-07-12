@@ -5,6 +5,7 @@ const apiRouter = require('./routes/apiroute');
 const htmlRoute = require('./routes/htmlroute');
 
 const app = express();
+app.use(express.static("public"));
 const PORT = process.env.PORT || 3000;
 
 //these two lines make it so express can communicate in JSON

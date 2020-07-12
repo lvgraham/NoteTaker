@@ -1,6 +1,6 @@
 const fs = require('fs');
 const util = require('util');
-const uuid = require('uuidv4');
+const { v4: uuidv4 } = require('uuid');
 
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -38,7 +38,7 @@ class Store {
             throw new Error('You need a title & text to save a note to the database')
         }
 
-        const newNote = {title, text, id: uuid}
+        const newNote = {title, text, id: uuidv4()}
 
         return this.getNotes().then(notes => {
             return [...notes, newNote]
