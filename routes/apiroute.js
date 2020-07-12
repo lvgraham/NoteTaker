@@ -1,6 +1,6 @@
 const express = require('express');
 const store = require('../public/assets/js/store');
-const { write } = require('../public/assets/js/store');
+// const { write } = require('../public/assets/js/store');
 
 const apiRouter = express.Router();
 
@@ -23,16 +23,10 @@ apiRouter.post("/", (req, res) => {
     })
 });
 
-apiRouter.post("/", (req, res) => {store.write(req.body).then(notes => {return res.json(notes)})})
-
-
 // delete route to remove the notes /api/notes/:id
 apiRouter.delete('/:id', (req, res) => {
-    store.removeNote(req.params.id)
-    .then((notes) => {
-        res.json(notes)
-    }).catch(err => {
-        return res.status(500).json(err);
+    store.removeNote(req.params.id).then(notes => {
+        return res.json(notes)
     })
 })
 
