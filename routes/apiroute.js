@@ -25,9 +25,7 @@ apiRouter.post("/", (req, res) => {
 
 // delete route to remove the notes /api/notes/:id
 apiRouter.delete('/:id', (req, res) => {
-    store.removeNote(req.params.id).then(notes => {
-        return res.json(notes)
-    })
+    store.removeNote(req.params.id)
 })
 
 module.exports = apiRouter;
