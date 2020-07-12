@@ -15,7 +15,4 @@ htmlRoute.get('/notes', (req, res, next) => {
 }); 
 
 
-
-
-
 module.exports = htmlRoute; 
